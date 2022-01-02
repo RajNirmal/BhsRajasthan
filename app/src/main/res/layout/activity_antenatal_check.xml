@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ante_pcts_id_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/ante_pcts_layout_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/pcts_id"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <EditText
+                android:id="@+id/ante_pcts_layout_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/pcts_id"
+                android:padding="@dimen/form_card_internal_padding" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ante_ahsa_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/ante_ahsa_layout_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/asha_name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <EditText
+                android:id="@+id/ante_asha_layout_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/asha_name"
+                android:padding="@dimen/form_card_internal_padding" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ante_dov_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/ante_dov_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/dov"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <TextView
+                android:id="@+id/ante_dov_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/dov" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ante_weight_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/ante_weight_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/weight"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <EditText
+                android:id="@+id/ante_weight_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/form_card_internal_padding"
+                android:hint="@string/weight" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ante_hb_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/ante_hb_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/hb"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <EditText
+                android:id="@+id/ante_hb_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/form_card_internal_padding"
+                android:hint="@string/hb" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ante_bp_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/ante_bp_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/bloodpressure"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <EditText
+                android:id="@+id/ante_bp_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/form_card_internal_padding"
+                android:hint="@string/bloodpressure" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ante_high_risk_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/ante_high_risk_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/high_risk"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <Spinner
+                android:id="@+id/ante_high_risk_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ante_folic_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/ante_folic_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/folic_acid"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_extra_small" />
+
+            <Spinner
+                android:id="@+id/ante_folic_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ante_folic_weight_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/ante_folic_weight_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/folic_acid_weight"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_extra_small" />
+
+            <Spinner
+                android:id="@+id/ante_folic_weight_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ante_submit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <Button
+                android:id="@+id/ante_submit_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/submit_button"
+                android:textColor="@android:color/background_light"
+                android:background="@color/colorPrimary"
+                android:textSize="@dimen/font_size_small" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

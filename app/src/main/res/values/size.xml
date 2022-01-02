@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_padding">15dp</dimen>
+    <dimen name="button_width">200dp</dimen>
+    <dimen name="form_card_padding">20dp</dimen>
+    <dimen name="form_card_internal_padding">20dp</dimen>
+
+    <dimen name="font_size_extra_small">12sp</dimen>
+    <dimen name="font_size_small">16sp</dimen>
+    <dimen name="font_size_medium">24sp</dimen>
+    <dimen name="font_size_large">32sp</dimen>
+
+</resources>

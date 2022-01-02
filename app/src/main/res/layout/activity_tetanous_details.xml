@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tetanous_pcts_id_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/tetanous_pcts_layout_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/pcts_id"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <EditText
+                android:id="@+id/tetanous_pcts_layout_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/pcts_id"
+                android:padding="@dimen/form_card_internal_padding" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tetanous_ahsa_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/tetanous_ahsa_layout_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/asha_name"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <EditText
+                android:id="@+id/tetanous_asha_layout_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/asha_name"
+                android:padding="@dimen/form_card_internal_padding" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tetanous_count_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/tetanous_count_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/tetanous_shot"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <Spinner
+                android:id="@+id/tetanous_count_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tetanous_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/teatnous_date_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/tetanous_shot_date"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+
+            <TextView
+                android:id="@+id/tetanous_date_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="date"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/tetanous_shot_date" />
+
+        </LinearLayout>
+
+       
+
+        <LinearLayout
+            android:id="@+id/tetanous_submit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <Button
+                android:id="@+id/tetanous_submit_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/submit_button"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/font_size_small" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

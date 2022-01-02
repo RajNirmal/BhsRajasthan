@@ -1,0 +1,133 @@
+<resources>
+    <string name="app_name">BhsRajasthan</string>
+    <string name="new_patient_button">New Patient</string>
+    <string name="update_patient_button">Update Patient Details</string>
+    <string name="submit_button">Save</string>
+    <string name="antenatal_button">Antenatal Check</string>
+    <string name="abortion_button">Abortion details</string>
+    <string name="tetanous_button">Tetanous shot</string>
+
+
+    <string name="pcts_id">PCTS ID</string>
+    <string name="bhamasha_id">Bhamasha ID</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="age">Age</string>
+    <string name="sex">Sex</string> <!-- Sadge Cry -->
+    <string name="weight">Weight</string>
+    <string name="hb">Hb (g/dL)</string>
+    <string name="bloodpressure">Blood Pressure</string>
+    <string name="height">Height (cm)</string>
+    <string name="dob">Date of Birth</string>
+    <string name="caste">Caste</string>
+    <string name="mobile">Mobile No.</string>
+    <string name="aadhar">Aadhar card No.</string>
+    <string name="registration_date">Registration date</string>
+    <string name="lmp">Last Menstrual Period</string>
+    <string name="cycle_days">No. of days of cycle</string>
+    <string name="migrant">Whether Migrant</string>
+    <string name="family_member">Name of family member</string>
+    <string name="relation">Relation to patient</string>
+    <string name="relation_mobile">Mobile No. of Relation</string>
+    <string name="hamlet">Hamlet</string>
+    <string name="village">Village</string>
+    <string name="block">Block</string>
+    <string name="block_aspur">Aspur</string>
+    <string name="district">District</string>
+    <string name="district_dingarpur">Dungarpur</string>
+    <string name="state">State</string>
+    <string name="state_rajasthan">Rajasthan</string>
+    <string name="asha_name">Asha name</string>
+    <string name="asha_number">Asha mobile no.</string>
+    <string name="midwife">Midwife</string>
+    <string name="aangwadi">Aangwadi (Optional)</string>
+    <string name="sub_center">Sub center</string>
+    <string name="phc">Primary health center</string>
+    <string name="phc_bhs">BHS</string>
+    <string name="community_health">Community health center (Optional)</string>
+    <string name="eligible">Eligible</string>
+    <string name="children">Children no.</string>
+    <string name="nfsa">NFSA (Optional)</string>
+    <string name="delivery">Delivery location</string>
+    <string name="dov">Date of visit</string>
+    <string name="high_risk">High Risk</string>
+    <string name="folic_acid">Gave folic acid</string>
+    <string name="folic_acid_weight">If yes, tablet details</string>
+    <string name="abortion_place">Abortion place</string>
+    <string name="abortion_type">Abortion type</string>
+    <string name="abortion_date">Abortion date</string>
+    <string name="abortion_iud">Post abortion IUCD</string>
+    <string name="abortion_iud_date">IUCD date</string>
+    <string name="tetanous_shot">Tetanous shots</string>
+    <string name="tetanous_shot_date">Shot date</string>
+
+    <string-array name="sex">
+        <item>Female</item>
+        <item>Male</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="yes_no">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="one_to_ten">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="village_list">
+        <item>Punjpura</item>
+        <item>Nithauwa</item>
+        <item>Dunglai</item>
+        <item>Harvar</item>
+        <item>Salamgarh</item>
+        <item>Pal Nithauwa</item>
+        <item>Karmat</item>
+        <item>Gamdi</item>
+        <item>Hiranagar</item>
+        <item>Mataji Kheda</item>
+        <item>Nai Basti</item>
+        <item>Khanan</item>
+        <item>Akashnagar</item>
+        <item>Modara</item>
+        <item>Solanj</item>
+        <item>Solanj Juni</item>
+        <item>Sarangi</item>
+        <item>Padi</item>
+        <item>Patanpura</item>
+        <item>Devpura</item>
+        <item>Satikheda</item>
+        <item>Danatlikheda</item>
+        <item>Sundelkheda</item>
+    </string-array>
+    <string-array name="sub_center_list">
+        <item>Nithauwa</item>
+        <item>Solanj</item>
+        <item>Pal Nithauwa</item>
+        <item>Harvar</item>
+        <item>Gamdi</item>
+        <item>Khanan</item>
+    </string-array>
+    <string-array name="folic_acid_weight">
+        <item> </item>
+        <item>180g</item>
+        <item>360g</item>
+    </string-array>
+    <string-array name="abortion_type">
+        <item>MDP &lt; 12</item>
+        <item>MDP &gt; 12</item>
+        <item>Spontaneous</item>
+    </string-array>
+    <string-array name="tetanous_shot_count">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>
