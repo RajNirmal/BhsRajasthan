@@ -21,7 +21,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/pcts_id"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -48,7 +47,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/bhamasha_id"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -75,7 +73,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/patient_name"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -102,7 +99,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/age"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -130,7 +126,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/sex"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -157,7 +152,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/weight"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -185,7 +179,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/hb"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -213,7 +206,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/bloodpressure"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -241,7 +233,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/height"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -269,7 +260,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/dob"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -297,7 +287,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/caste"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -325,7 +314,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/mobile"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -355,7 +343,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/aadhar"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -384,7 +371,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/registration_date"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -412,10 +398,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/lmp"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_size_extra_small" />
+                android:textSize="@dimen/font_size_small" />
 
             <EditText
                 android:id="@+id/lmp_input"
@@ -439,17 +424,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/cycle_days"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_size_extra_small" />
+                android:textSize="@dimen/font_size_small" />
 
             <EditText
                 android:id="@+id/cycle_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/cycle_days"
                 android:inputType="number"
                 android:maxLength="3"
                 android:padding="@dimen/form_card_internal_padding" />
@@ -468,7 +451,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/migrant"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -494,17 +476,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/family_member"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_size_extra_small" />
+                android:textSize="@dimen/font_size_small" />
 
             <EditText
                 android:id="@+id/family_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/family_member"
                 android:padding="@dimen/form_card_internal_padding" />
         </LinearLayout>
 
@@ -520,17 +500,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/relation"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_size_extra_small" />
+                android:textSize="@dimen/font_size_small" />
 
             <EditText
                 android:id="@+id/relative_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/relation"
                 android:padding="@dimen/form_card_internal_padding" />
         </LinearLayout>
 
@@ -546,7 +524,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-
                 android:text="@string/relation_mobile"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -575,7 +552,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/hamlet"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -601,7 +577,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/village"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -627,7 +602,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/block"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -655,7 +629,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/district"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -683,7 +656,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/state"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -710,7 +682,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/asha_name"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -737,17 +708,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/asha_number"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_size_extra_small" />
+                android:textSize="@dimen/font_size_small" />
 
             <EditText
                 android:id="@+id/asha_mobile_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/asha_number"
                 android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
@@ -764,17 +733,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/midwife"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_size_extra_small" />
+                android:textSize="@dimen/font_size_small" />
 
             <EditText
                 android:id="@+id/midwife_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/midwife"
                 android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
@@ -791,17 +758,16 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/aangwadi"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_size_extra_small" />
+                android:textSize="@dimen/font_size_small" />
 
             <EditText
                 android:id="@+id/aangwadi_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/aangwadi"
+
                 android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
@@ -819,7 +785,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/sub_center"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -845,10 +810,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/phc"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_size_extra_small" />
+                android:textSize="@dimen/font_size_small" />
 
             <TextView
                 android:id="@+id/phc_input"
@@ -872,17 +836,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/community_health"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_size_extra_small" />
+                android:textSize="@dimen/font_size_small" />
 
             <EditText
                 android:id="@+id/chc_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="@string/community_health"
                 android:inputType="text"
                 android:padding="@dimen/form_card_internal_padding" />
 
@@ -899,7 +861,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/eligible"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -925,7 +886,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/children"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -952,7 +912,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/nfsa"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />
@@ -978,7 +937,6 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/delivery"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/font_size_small" />

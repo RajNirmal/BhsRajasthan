@@ -206,10 +206,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
+                android:paddingStart="@dimen/form_card_internal_padding"
+
                 android:text="@string/folic_acid"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_size_extra_small" />
+                android:textSize="@dimen/font_size_small" />
 
             <Spinner
                 android:id="@+id/ante_folic_input"
@@ -230,10 +231,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="@dimen/form_card_internal_padding"
+                android:paddingStart="@dimen/form_card_internal_padding"
                 android:text="@string/folic_acid_weight"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/font_size_extra_small" />
+                android:textSize="@dimen/font_size_small" />
 
             <Spinner
                 android:id="@+id/ante_folic_weight_input"
