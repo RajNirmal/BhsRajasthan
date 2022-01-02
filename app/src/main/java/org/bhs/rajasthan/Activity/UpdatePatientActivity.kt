@@ -14,10 +14,10 @@ class UpdatePatientActivity : Activity() {
             switchActivity(Intent(this, AntenatalActivity::class.java))
         }
         abortion_button.setOnClickListener {
-            switchActivity(Intent(this, HomeActivity::class.java))
+            switchActivity(Intent(this, AbortionActivity::class.java))
         }
         tetanous_button.setOnClickListener {
-            switchActivity(Intent(this, HomeActivity::class.java))
+            switchActivity(Intent(this, TetanousActivity::class.java))
         }
     }
 

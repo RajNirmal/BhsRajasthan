@@ -1,33 +1,35 @@
 package org.bhs.rajasthan.Activity
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.DatePickerDialog
-import android.os.Build
 import android.os.Bundle
-import android.util.JsonReader
 import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
-import androidx.annotation.RequiresApi
-import com.google.gson.Gson
+import com.google.android.gms.location.LocationServices
+import java.util.Calendar
+import kotlinx.android.synthetic.main.activity_new_patient.dob_input
+import kotlinx.android.synthetic.main.activity_new_patient.registration_input
+import kotlinx.android.synthetic.main.activity_new_patient.submit_button
 import kotlinx.android.synthetic.main.activity_new_patient.*
-
 import org.bhs.rajasthan.Model.Patient
 import org.bhs.rajasthan.R
 import org.bhs.rajasthan.util.ModelMapper.serializeToMap
-import java.util.*
+
 
 
 class NewPatientActivity : Activity() {
-    @RequiresApi(Build.VERSION_CODES.N)
+    lateinit var location: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        getCurrentUserLocation()
         setContentView(R.layout.activity_new_patient)
         setupComponents()
-
         submit_button.setOnClickListener {
             val patient = getPatientObject()
+            patient.location = location
             val patientEntity = patient.formParseEntity(patient.serializeToMap())
             patientEntity.saveInBackground {
                 if (it == null) {
@@ -37,6 +39,17 @@ class NewPatientActivity : Activity() {
                 }
             }
         }
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun getCurrentUserLocation() {
+        val fusedLocationServices =
+            LocationServices.getFusedLocationProviderClient(applicationContext)
+        fusedLocationServices
+            .lastLocation.addOnSuccessListener {
+                location = it.latitude.toString() + " , " + it.longitude.toString()
+                Log.i("NewPatientActivity", " Successfully fetched location ${location}")
+            }
     }
 
     private fun setupComponents() {
