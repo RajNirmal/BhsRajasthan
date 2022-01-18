@@ -24,9 +24,12 @@ class NewPatientActivity : Activity() {
     lateinit var location: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        getCurrentUserLocation()
+
         setContentView(R.layout.activity_new_patient)
         setupComponents()
+        location_button.setOnClickListener {
+            getCurrentUserLocation()
+        }
         submit_button.setOnClickListener {
             val patient = getPatientObject()
             patient.location = location
@@ -47,9 +50,13 @@ class NewPatientActivity : Activity() {
             LocationServices.getFusedLocationProviderClient(applicationContext)
         fusedLocationServices
             .lastLocation.addOnSuccessListener {
+                Toast.makeText(this, "Successfully fetched the location",  Toast.LENGTH_SHORT).show()
                 location = it.latitude.toString() + " , " + it.longitude.toString()
                 Log.i("NewPatientActivity", " Successfully fetched location ${location}")
             }
+        fusedLocationServices.lastLocation.addOnFailureListener {
+            Toast.makeText(this, "Unable to fetch location, Turn on GPS and try again",  Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun setupComponents() {

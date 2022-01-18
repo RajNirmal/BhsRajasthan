@@ -3,6 +3,7 @@
     <string name="new_patient_button">New Patient</string>
     <string name="update_patient_button">Update Patient Details</string>
     <string name="submit_button">Save</string>
+    <string name="location_button">Fetch Location</string>
     <string name="antenatal_button">Antenatal Check</string>
     <string name="abortion_button">Abortion details</string>
     <string name="tetanous_button">Tetanous shot</string>
