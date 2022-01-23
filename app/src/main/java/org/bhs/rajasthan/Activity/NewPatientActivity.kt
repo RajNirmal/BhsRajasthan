@@ -119,6 +119,14 @@ class NewPatientActivity : Activity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             child_input.adapter = adapter
         }
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.yes_no,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            poverty_input.adapter = adapter
+        }
 
         dob_input.setOnClickListener {
             Log.i("NewPatientActivity", "Inside onclick listener")
@@ -197,6 +205,7 @@ class NewPatientActivity : Activity() {
         patient.children_count = child_input.selectedItem.toString()
         patient.nfsa = nfsa_input.text.toString()
         patient.delivery_location = delivery_input.text.toString()
+        patient.above_poverty = poverty_input.selectedItem.toString()
         return patient
     }
 }

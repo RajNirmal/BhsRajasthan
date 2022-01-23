@@ -40,13 +40,14 @@ data class Patient(
     var eligible: String = "a",
     var children_count: String = "a",
     var nfsa: String = "a",
-    var delivery_location: String = "a"
+    var delivery_location: String = "a",
+    var above_poverty: String = "yes"
 ) {
 
     @RequiresApi(Build.VERSION_CODES.N)
-    fun formParseEntity(details: Map<String,Any>): ParseObject {
+    fun formParseEntity(details: Map<String, Any>): ParseObject {
         var entity: ParseObject = ParseObject("Patient")
-        details.forEach { key, varue ->  entity.put(key, varue)}
+        details.forEach { key, varue -> entity.put(key, varue) }
         return entity
     }
 }

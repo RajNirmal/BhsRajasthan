@@ -952,6 +952,31 @@
                 android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/poverty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/poverty_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/above_poverty"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <Spinner
+                android:id="@+id/poverty_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding" />
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:id="@+id/submit_layout"
@@ -970,7 +995,6 @@
                 android:text="@string/submit_button"
                 android:textColor="@android:color/background_light"
                 android:textSize="@dimen/font_size_small" />
-
 
         </LinearLayout>
 
