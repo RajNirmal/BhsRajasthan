@@ -117,12 +117,12 @@
     </string-array>
     <string-array name="folic_acid_weight">
         <item> </item>
-        <item>180g</item>
-        <item>360g</item>
+        <item>180tab</item>
+        <item>360tab</item>
     </string-array>
     <string-array name="abortion_type">
-        <item>MDP &lt; 12</item>
-        <item>MDP &gt; 12</item>
+        <item>MTP &lt; 12</item>
+        <item>MTP &gt; 12</item>
         <item>Spontaneous</item>
     </string-array>
     <string-array name="tetanous_shot_count">

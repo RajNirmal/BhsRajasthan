@@ -13,7 +13,8 @@ data class AntenatalCheck(
     var patient_bp: String = "b",
     var high_risk: String = "no",
     var folic_acid: String = "no",
-    var folic_acid_grams: String = "180"
+    var folic_acid_grams: String = "180",
+    var location: String = "b"
 ) {
     @RequiresApi(Build.VERSION_CODES.N)
     fun formParseEntity(details: Map<String, Any>): ParseObject {

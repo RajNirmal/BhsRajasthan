@@ -1,5 +1,6 @@
 package org.bhs.rajasthan.Activity
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
+import com.google.android.gms.location.LocationServices
 import kotlinx.android.synthetic.main.activity_antenatal_check.*
 import kotlinx.android.synthetic.main.activity_new_patient.*
 import org.bhs.rajasthan.Model.AntenatalCheck
@@ -15,6 +17,7 @@ import org.bhs.rajasthan.util.ModelMapper.serializeToMap
 import java.util.*
 
 class AntenatalActivity : Activity() {
+    lateinit var location: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_antenatal_check)
@@ -24,10 +27,17 @@ class AntenatalActivity : Activity() {
             val antenatalEntity = anteNatal.formParseEntity(anteNatal.serializeToMap())
             antenatalEntity.saveInBackground {
                 if (it == null) {
-                    Toast.makeText(applicationContext, "Saved the antenatal check details !!!!", Toast.LENGTH_LONG)
+                    Toast.makeText(
+                        applicationContext,
+                        "Saved the antenatal check details !!!!",
+                        Toast.LENGTH_LONG
+                    )
                         .show()
                 }
             }
+        }
+        location_button.setOnClickListener {
+            getCurrentUserLocation()
         }
     }
 
@@ -70,7 +80,7 @@ class AntenatalActivity : Activity() {
             val picker: DatePickerDialog = DatePickerDialog(
                 this@AntenatalActivity,
                 { view, year, monthOfYear, dayOfMonth ->
-                    ante_dov_input.setText("$dayOfMonth,  ${monthOfYear + 1 }, $year")
+                    ante_dov_input.setText("$dayOfMonth,  ${monthOfYear + 1}, $year")
                 },
                 year,
                 month,
@@ -80,7 +90,26 @@ class AntenatalActivity : Activity() {
         }
     }
 
-    private fun getAntenatalObject(): AntenatalCheck{
+    @SuppressLint("MissingPermission")
+    private fun getCurrentUserLocation() {
+        val fusedLocationServices =
+            LocationServices.getFusedLocationProviderClient(applicationContext)
+        fusedLocationServices
+            .lastLocation.addOnSuccessListener {
+                Toast.makeText(this, "Successfully fetched the location", Toast.LENGTH_SHORT).show()
+                location = it.latitude.toString() + " , " + it.longitude.toString()
+                Log.i("AntenatalActivity", " Successfully fetched location ${location}")
+            }
+        fusedLocationServices.lastLocation.addOnFailureListener {
+            Toast.makeText(
+                this,
+                "Unable to fetch location, Turn on GPS and try again",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+    }
+
+    private fun getAntenatalObject(): AntenatalCheck {
         val entity = AntenatalCheck()
         entity.pcts_id = ante_pcts_layout_input.text.toString()
         entity.asha_name = ante_asha_layout_input.text.toString()
@@ -91,7 +120,7 @@ class AntenatalActivity : Activity() {
         entity.high_risk = ante_high_risk_input.selectedItem.toString()
         entity.folic_acid = ante_folic_input.selectedItem.toString()
         entity.folic_acid_grams = ante_folic_weight_input.selectedItem.toString()
-
+        entity.location = location
         return entity
     }
 }

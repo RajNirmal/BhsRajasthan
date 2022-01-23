@@ -27,12 +27,8 @@ class NewPatientActivity : Activity() {
 
         setContentView(R.layout.activity_new_patient)
         setupComponents()
-        location_button.setOnClickListener {
-            getCurrentUserLocation()
-        }
         submit_button.setOnClickListener {
             val patient = getPatientObject()
-            patient.location = location
             val patientEntity = patient.formParseEntity(patient.serializeToMap())
             patientEntity.saveInBackground {
                 if (it == null) {
@@ -201,8 +197,6 @@ class NewPatientActivity : Activity() {
         patient.children_count = child_input.selectedItem.toString()
         patient.nfsa = nfsa_input.text.toString()
         patient.delivery_location = delivery_input.text.toString()
-        patient.location = "To be done"
-
         return patient
     }
 }

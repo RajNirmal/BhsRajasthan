@@ -40,8 +40,7 @@ data class Patient(
     var eligible: String = "a",
     var children_count: String = "a",
     var nfsa: String = "a",
-    var delivery_location: String = "a",
-    var location: String = "b"
+    var delivery_location: String = "a"
 ) {
 
     @RequiresApi(Build.VERSION_CODES.N)

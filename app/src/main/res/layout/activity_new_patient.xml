@@ -611,8 +611,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/block_aspur"
-                android:padding="@dimen/form_card_internal_padding" />
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/block_aspur" />
 
 
         </LinearLayout>
@@ -638,8 +638,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/district_dingarpur"
-                android:padding="@dimen/form_card_internal_padding" />
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/district_dingarpur" />
 
         </LinearLayout>
 
@@ -665,8 +665,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/state_rajasthan"
-                android:padding="@dimen/form_card_internal_padding" />
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/state_rajasthan" />
 
         </LinearLayout>
 
@@ -819,8 +819,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/phc_bhs"
-                android:padding="@dimen/form_card_internal_padding" />
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/phc_bhs" />
 
         </LinearLayout>
 
@@ -849,6 +849,7 @@
                 android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/eligible_layout"
             android:layout_width="match_parent"
@@ -925,6 +926,7 @@
                 android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/delivery_layout"
             android:layout_width="match_parent"
@@ -948,27 +950,6 @@
                 android:layout_weight="1"
                 android:hint="@string/delivery"
                 android:padding="@dimen/form_card_internal_padding" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/location_layout"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:padding="@dimen/form_card_padding">
-
-            <Button
-                android:id="@+id/location_button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:padding="@dimen/form_card_internal_padding"
-                android:text="@string/location_button"
-                android:textColor="@android:color/background_light"
-                android:textSize="@dimen/font_size_small" />
-
 
         </LinearLayout>
 
