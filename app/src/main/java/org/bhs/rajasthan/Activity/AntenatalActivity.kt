@@ -24,6 +24,8 @@ class AntenatalActivity : Activity() {
         setupComponents()
         ante_submit_button.setOnClickListener {
             val anteNatal = getAntenatalObject()
+//            checkIfAllMandatoryFieldsArePresent(anteNatal)
+            //break
             val antenatalEntity = anteNatal.formParseEntity(anteNatal.serializeToMap())
             antenatalEntity.saveInBackground {
                 if (it == null) {
@@ -41,10 +43,16 @@ class AntenatalActivity : Activity() {
         }
     }
 
+//    private fun checkIfAllMandatoryFieldsArePresent(val entity: AntenatalCheck) {
+//        entity.anc_visit_count.isNullOrEmpty()
+//        return true
+//    }
+
     private fun setupComponents() {
         val high_risk = findViewById<Spinner>(R.id.ante_high_risk_input)
         val folic_acid = findViewById<Spinner>(R.id.ante_folic_input)
         val folic_acid_weight = findViewById<Spinner>(R.id.ante_folic_weight_input)
+        val anc_visit_count_spinner = findViewById<Spinner>(R.id.ante_visit_count_input)
         ArrayAdapter.createFromResource(
             this,
             R.array.yes_no,
@@ -69,6 +77,14 @@ class AntenatalActivity : Activity() {
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             folic_acid_weight.adapter = adapter
+        }
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.anc_visit_count,
+            android.R.layout.simple_spinner_item
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            anc_visit_count_spinner.adapter = adapter
         }
         ante_dov_input.setOnClickListener {
             Log.i("AntenatalActivity", "Inside onclick listener")
@@ -121,6 +137,7 @@ class AntenatalActivity : Activity() {
         entity.folic_acid = ante_folic_input.selectedItem.toString()
         entity.folic_acid_grams = ante_folic_weight_input.selectedItem.toString()
         entity.location = location
+        entity.anc_visit_count = ante_visit_count_input.selectedItem.toString()
         return entity
     }
 }

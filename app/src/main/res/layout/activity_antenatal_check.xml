@@ -35,6 +35,32 @@
                 android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ante_visit_count_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/form_card_padding">
+
+            <TextView
+                android:id="@+id/ante_visit_count_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding"
+                android:text="@string/anc_no"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font_size_small" />
+
+            <Spinner
+                android:id="@+id/ante_visit_count_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/form_card_internal_padding" />
+        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ante_ahsa_name_layout"
             android:layout_width="match_parent"
@@ -61,6 +87,7 @@
                 android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ante_dov_layout"
             android:layout_width="match_parent"
@@ -110,11 +137,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:hint="@string/weight"
                 android:inputType="numberDecimal"
-                android:padding="@dimen/form_card_internal_padding"
-                android:hint="@string/weight" />
+                android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ante_hb_layout"
             android:layout_width="match_parent"
@@ -137,9 +165,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:hint="@string/hb"
                 android:inputType="numberDecimal"
-                android:padding="@dimen/form_card_internal_padding"
-                android:hint="@string/hb" />
+                android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
 
@@ -165,11 +193,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:hint="@string/bloodpressure"
                 android:inputType="numberDecimal"
-                android:padding="@dimen/form_card_internal_padding"
-                android:hint="@string/bloodpressure" />
+                android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ante_high_risk_layout"
             android:layout_width="match_parent"
@@ -194,6 +223,7 @@
                 android:layout_weight="1"
                 android:padding="@dimen/form_card_internal_padding" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ante_folic_layout"
             android:layout_width="match_parent"
@@ -219,6 +249,7 @@
                 android:layout_weight="1"
                 android:padding="@dimen/form_card_internal_padding" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ante_folic_weight_layout"
             android:layout_width="match_parent"
@@ -244,6 +275,7 @@
                 android:padding="@dimen/form_card_internal_padding" />
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/location_layout"
             android:layout_width="match_parent"
@@ -264,6 +296,7 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ante_submit_layout"
             android:layout_width="match_parent"
@@ -276,10 +309,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/colorPrimary"
                 android:padding="@dimen/form_card_internal_padding"
                 android:text="@string/submit_button"
                 android:textColor="@android:color/background_light"
-                android:background="@color/colorPrimary"
                 android:textSize="@dimen/font_size_small" />
 
         </LinearLayout>

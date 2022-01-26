@@ -61,6 +61,7 @@
     <string name="tetanous_shot">Tetanous shots</string>
     <string name="tetanous_shot_date">Shot date</string>
     <string name="above_poverty">Above poverty line</string>
+    <string name="anc_no">ANC No.</string>
 
     <string-array name="sex">
         <item>Female</item>
@@ -130,6 +131,12 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+    </string-array>
+    <string-array name="anc_visit_count">
+        <item>ANC 1</item>
+        <item>ANC 2</item>
+        <item>ANC 3</item>
+        <item>ANC 4</item>
     </string-array>
 
 </resources>

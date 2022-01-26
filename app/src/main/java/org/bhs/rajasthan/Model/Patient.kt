@@ -46,7 +46,7 @@ data class Patient(
 
     @RequiresApi(Build.VERSION_CODES.N)
     fun formParseEntity(details: Map<String, Any>): ParseObject {
-        var entity: ParseObject = ParseObject("Patient")
+        var entity: ParseObject = ParseObject("Patient2")
         details.forEach { key, varue -> entity.put(key, varue) }
         return entity
     }
