@@ -60,6 +60,7 @@ class AntenatalActivity : Activity() {
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             high_risk.adapter = adapter
+            high_risk.setSelection(1)
         }
 
         ArrayAdapter.createFromResource(
@@ -69,6 +70,7 @@ class AntenatalActivity : Activity() {
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             folic_acid.adapter = adapter
+            folic_acid.setSelection(1)
         }
         ArrayAdapter.createFromResource(
             this,
