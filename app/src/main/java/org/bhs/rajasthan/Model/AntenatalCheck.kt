@@ -15,7 +15,7 @@ data class AntenatalCheck(
     var folic_acid: String = "no",
     var folic_acid_grams: String = "180",
     var location: String = "b",
-    @field:Mandatory var anc_visit_count: String = "ANC 1"
+    var anc_visit_count: String = "ANC 1"
 ) {
     @RequiresApi(Build.VERSION_CODES.N)
     fun formParseEntity(details: Map<String, Any>): ParseObject {
@@ -24,5 +24,3 @@ data class AntenatalCheck(
         return entity
     }
 }
-
-annotation class Mandatory
