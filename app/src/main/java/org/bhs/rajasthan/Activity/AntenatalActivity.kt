@@ -9,23 +9,29 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
 import com.google.android.gms.location.LocationServices
+import java.util.*
 import kotlinx.android.synthetic.main.activity_antenatal_check.*
 import kotlinx.android.synthetic.main.activity_new_patient.*
 import org.bhs.rajasthan.Model.AntenatalCheck
 import org.bhs.rajasthan.R
+import org.bhs.rajasthan.util.MandatoryFieldUtil
 import org.bhs.rajasthan.util.ModelMapper.serializeToMap
-import java.util.*
 
 class AntenatalActivity : Activity() {
-    lateinit var location: String
+    var location = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_antenatal_check)
         setupComponents()
         ante_submit_button.setOnClickListener {
             val anteNatal = getAntenatalObject()
-//            checkIfAllMandatoryFieldsArePresent(anteNatal)
-            //break
+            if (!MandatoryFieldUtil.checkIfMandatoryFieldsAreFilled(
+                    anteNatal,
+                    applicationContext
+                )
+            ) {
+                return@setOnClickListener
+            }
             val antenatalEntity = anteNatal.formParseEntity(anteNatal.serializeToMap())
             antenatalEntity.saveInBackground {
                 if (it == null) {
@@ -42,11 +48,6 @@ class AntenatalActivity : Activity() {
             getCurrentUserLocation()
         }
     }
-
-//    private fun checkIfAllMandatoryFieldsArePresent(val entity: AntenatalCheck) {
-//        entity.anc_visit_count.isNullOrEmpty()
-//        return true
-//    }
 
     private fun setupComponents() {
         val high_risk = findViewById<Spinner>(R.id.ante_high_risk_input)
@@ -138,7 +139,10 @@ class AntenatalActivity : Activity() {
         entity.high_risk = ante_high_risk_input.selectedItem.toString()
         entity.folic_acid = ante_folic_input.selectedItem.toString()
         entity.folic_acid_grams = ante_folic_weight_input.selectedItem.toString()
-        entity.location = location
+        when {
+            !location.isEmpty() -> entity.location = location
+            else -> entity.location = ""
+        }
         entity.anc_visit_count = ante_visit_count_input.selectedItem.toString()
         return entity
     }

@@ -15,6 +15,7 @@ import org.bhs.rajasthan.Model.TetanousShotDetails
 import org.bhs.rajasthan.R
 import org.bhs.rajasthan.util.ModelMapper.serializeToMap
 import java.util.*
+import org.bhs.rajasthan.util.MandatoryFieldUtil
 
 class TetanousActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +24,13 @@ class TetanousActivity : Activity() {
         setupComponents()
         tetanous_submit_button.setOnClickListener {
             val tetanous_details = getTetanousShotDetails()
+            if (!MandatoryFieldUtil.checkIfMandatoryFieldsAreFilled(
+                    tetanous_details,
+                    applicationContext
+                )
+            ) {
+                return@setOnClickListener
+            }
             val tetanous_entity =
                 tetanous_details.formParseEntity(tetanous_details.serializeToMap())
             tetanous_entity.saveInBackground {

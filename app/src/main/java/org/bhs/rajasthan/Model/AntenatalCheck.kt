@@ -5,8 +5,8 @@ import androidx.annotation.RequiresApi
 import com.parse.ParseObject
 
 data class AntenatalCheck(
-    var pcts_id: String = "a",
-    var asha_name: String = "a",
+    @field:Mandatory var pcts_id: String = "a",
+    @field:Mandatory var asha_name: String = "a",
     var date_of_visit: String = "a",
     var patient_weight: String = "a",
     var patient_hb: String = "a",
@@ -15,7 +15,7 @@ data class AntenatalCheck(
     var folic_acid: String = "no",
     var folic_acid_grams: String = "180",
     var location: String = "b",
-    var anc_visit_count: String = "ANC 1"
+    @field:Mandatory var anc_visit_count: String = "ANC 1"
 ) {
     @RequiresApi(Build.VERSION_CODES.N)
     fun formParseEntity(details: Map<String, Any>): ParseObject {
@@ -24,3 +24,5 @@ data class AntenatalCheck(
         return entity
     }
 }
+
+annotation class Mandatory

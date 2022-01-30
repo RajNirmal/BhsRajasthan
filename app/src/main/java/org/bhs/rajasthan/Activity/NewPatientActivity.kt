@@ -16,8 +16,8 @@ import kotlinx.android.synthetic.main.activity_new_patient.submit_button
 import kotlinx.android.synthetic.main.activity_new_patient.*
 import org.bhs.rajasthan.Model.Patient
 import org.bhs.rajasthan.R
+import org.bhs.rajasthan.util.MandatoryFieldUtil
 import org.bhs.rajasthan.util.ModelMapper.serializeToMap
-
 
 
 class NewPatientActivity : Activity() {
@@ -29,6 +29,13 @@ class NewPatientActivity : Activity() {
         setupComponents()
         submit_button.setOnClickListener {
             val patient = getPatientObject()
+            if (!MandatoryFieldUtil.checkIfMandatoryFieldsAreFilled(
+                    patient,
+                    applicationContext
+                )
+            ) {
+                return@setOnClickListener
+            }
             val patientEntity = patient.formParseEntity(patient.serializeToMap())
             patientEntity.saveInBackground {
                 if (it == null) {
@@ -46,12 +53,16 @@ class NewPatientActivity : Activity() {
             LocationServices.getFusedLocationProviderClient(applicationContext)
         fusedLocationServices
             .lastLocation.addOnSuccessListener {
-                Toast.makeText(this, "Successfully fetched the location",  Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Successfully fetched the location", Toast.LENGTH_SHORT).show()
                 location = it.latitude.toString() + " , " + it.longitude.toString()
                 Log.i("NewPatientActivity", " Successfully fetched location ${location}")
             }
         fusedLocationServices.lastLocation.addOnFailureListener {
-            Toast.makeText(this, "Unable to fetch location, Turn on GPS and try again",  Toast.LENGTH_LONG).show()
+            Toast.makeText(
+                this,
+                "Unable to fetch location, Turn on GPS and try again",
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 

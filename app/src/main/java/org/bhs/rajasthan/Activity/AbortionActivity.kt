@@ -13,6 +13,7 @@ import org.bhs.rajasthan.Model.AbortionDetail
 import org.bhs.rajasthan.R
 import org.bhs.rajasthan.util.ModelMapper.serializeToMap
 import java.util.*
+import org.bhs.rajasthan.util.MandatoryFieldUtil
 
 class AbortionActivity: Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,13 @@ class AbortionActivity: Activity() {
         setupComponents()
         abortion_submit_button.setOnClickListener {
             val abortion_details = getAbortionDetails()
+            if (!MandatoryFieldUtil.checkIfMandatoryFieldsAreFilled(
+                    abortion_details,
+                    applicationContext
+                )
+            ) {
+                return@setOnClickListener
+            }
             val abortion_entity = abortion_details.formParseEntity(abortion_details.serializeToMap())
             abortion_entity.saveInBackground {
                 if (it == null) {
