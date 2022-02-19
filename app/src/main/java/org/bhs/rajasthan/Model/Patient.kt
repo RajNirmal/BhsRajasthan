@@ -22,7 +22,7 @@ data class Patient(
     @field:Mandatory var lmp: String = "a",
     @field:Mandatory var cycle_days: String = "a",
     @field:Mandatory var migrant: String = "a",
-    @field:Mandatory var family_membstringer_name: String = "a",
+    @field:Mandatory var family_member_name: String = "a",
     @field:Mandatory var relation_to_patient: String = "a",
     @field:Mandatory var mobile_relative: String = "a",
     @field:Mandatory var hamlet: String = "a",

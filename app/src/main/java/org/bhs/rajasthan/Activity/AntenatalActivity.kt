@@ -5,7 +5,10 @@ import android.app.Activity
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.Toast
 import com.google.android.gms.location.LocationServices
@@ -53,6 +56,11 @@ class AntenatalActivity : Activity() {
         val high_risk = findViewById<Spinner>(R.id.ante_high_risk_input)
         val folic_acid = findViewById<Spinner>(R.id.ante_folic_input)
         val folic_acid_weight = findViewById<Spinner>(R.id.ante_folic_weight_input)
+        val folic_acid_layout = findViewById<LinearLayout>(R.id.ante_folic_layout)
+        val folic_acid_weight_layout = findViewById<LinearLayout>(R.id.ante_folic_weight_layout)
+
+        folic_acid_layout.visibility = View.GONE
+        folic_acid_weight_layout.visibility = View.GONE
         val anc_visit_count_spinner = findViewById<Spinner>(R.id.ante_visit_count_input)
         ArrayAdapter.createFromResource(
             this,
@@ -62,7 +70,28 @@ class AntenatalActivity : Activity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             high_risk.adapter = adapter
             high_risk.setSelection(1)
+            high_risk.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View,
+                    position: Int,
+                    id: Long
+                ) {
+                    if (position == 1) {
+                        folic_acid_layout.visibility = View.GONE
+                        folic_acid_weight_layout.visibility = View.GONE
+                    } else {
+                        folic_acid_layout.visibility = View.VISIBLE
+                        folic_acid_weight_layout.visibility = View.VISIBLE
+                    }
+                }
+
+                override fun onNothingSelected(p0: AdapterView<*>?) {
+                    TODO("Not yet implemented")
+                }
+            }
         }
+
 
         ArrayAdapter.createFromResource(
             this,
