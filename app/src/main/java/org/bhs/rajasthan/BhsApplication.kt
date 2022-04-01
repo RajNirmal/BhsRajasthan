@@ -11,6 +11,7 @@ class BhsApplication : Application() {
                 .applicationId("zQVwd73opkSoKwxgYt85DFHSTZdwKPsQCH5znk5J")
                 .clientKey("VIh7H7lc0aakzX0kve7KrsW1pMpEFiG0KYX3wEVM")
                 .server("https://parseapi.back4app.com")
+                .enableLocalDataStore()
                 .build()
         )
     }

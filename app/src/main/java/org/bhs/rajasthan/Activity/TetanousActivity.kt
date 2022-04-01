@@ -15,6 +15,7 @@ import org.bhs.rajasthan.Model.TetanousShotDetails
 import org.bhs.rajasthan.R
 import org.bhs.rajasthan.util.ModelMapper.serializeToMap
 import java.util.*
+import org.bhs.rajasthan.service.InternetAvailabilityService
 import org.bhs.rajasthan.util.MandatoryFieldUtil
 
 class TetanousActivity : Activity() {
@@ -33,7 +34,14 @@ class TetanousActivity : Activity() {
             }
             val tetanous_entity =
                 tetanous_details.formParseEntity(tetanous_details.serializeToMap())
-            tetanous_entity.saveInBackground {
+            if (!InternetAvailabilityService.isInternetAccessible(this)) {
+                Toast.makeText(
+                    this,
+                    "Internet is not available, Details will be saved automatically when internet is available",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+            tetanous_entity.saveEventually {
                 Log.i("TetanousActivity","Error while save $it")
                 if (it == null) {
                     Toast.makeText(

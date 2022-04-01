@@ -13,6 +13,7 @@ import org.bhs.rajasthan.Model.AbortionDetail
 import org.bhs.rajasthan.R
 import org.bhs.rajasthan.util.ModelMapper.serializeToMap
 import java.util.*
+import org.bhs.rajasthan.service.InternetAvailabilityService
 import org.bhs.rajasthan.util.MandatoryFieldUtil
 
 class AbortionActivity: Activity() {
@@ -30,7 +31,14 @@ class AbortionActivity: Activity() {
                 return@setOnClickListener
             }
             val abortion_entity = abortion_details.formParseEntity(abortion_details.serializeToMap())
-            abortion_entity.saveInBackground {
+            if (!InternetAvailabilityService.isInternetAccessible(this)) {
+                Toast.makeText(
+                    this,
+                    "Internet is not available, Details will be saved automatically when internet is available",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+            abortion_entity.saveEventually {
                 if (it == null) {
                     Toast.makeText(applicationContext, "Saved the abortion details !!!!", Toast.LENGTH_LONG)
                         .show()

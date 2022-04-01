@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_new_patient.submit_button
 import kotlinx.android.synthetic.main.activity_new_patient.*
 import org.bhs.rajasthan.Model.Patient
 import org.bhs.rajasthan.R
+import org.bhs.rajasthan.service.InternetAvailabilityService
 import org.bhs.rajasthan.util.MandatoryFieldUtil
 import org.bhs.rajasthan.util.ModelMapper.serializeToMap
 
@@ -37,7 +38,14 @@ class NewPatientActivity : Activity() {
                 return@setOnClickListener
             }
             val patientEntity = patient.formParseEntity(patient.serializeToMap())
-            patientEntity.saveInBackground {
+            if (!InternetAvailabilityService.isInternetAccessible(this)) {
+                Toast.makeText(
+                    this,
+                    "Internet is not available, Details will be saved automatically when internet is available",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+            patientEntity.saveEventually {
                 if (it == null) {
                     Toast.makeText(applicationContext, "Saved the file !!!!", Toast.LENGTH_LONG)
                         .show()

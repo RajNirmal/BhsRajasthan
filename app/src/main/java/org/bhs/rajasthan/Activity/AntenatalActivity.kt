@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_antenatal_check.*
 import kotlinx.android.synthetic.main.activity_new_patient.*
 import org.bhs.rajasthan.Model.AntenatalCheck
 import org.bhs.rajasthan.R
+import org.bhs.rajasthan.service.InternetAvailabilityService
 import org.bhs.rajasthan.util.MandatoryFieldUtil
 import org.bhs.rajasthan.util.ModelMapper.serializeToMap
 
@@ -36,7 +37,14 @@ class AntenatalActivity : Activity() {
                 return@setOnClickListener
             }
             val antenatalEntity = anteNatal.formParseEntity(anteNatal.serializeToMap())
-            antenatalEntity.saveInBackground {
+            if (!InternetAvailabilityService.isInternetAccessible(this)) {
+                Toast.makeText(
+                    this,
+                    "Internet is not available, Details will be saved automatically when internet is available",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+            antenatalEntity.saveEventually {
                 if (it == null) {
                     Toast.makeText(
                         applicationContext,
