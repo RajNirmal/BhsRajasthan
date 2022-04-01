@@ -9,10 +9,9 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
-import com.google.android.gms.location.LocationServices
+import java.util.*
 import kotlinx.android.synthetic.main.activity_home_constraint.*
 import org.bhs.rajasthan.R
-import java.util.*
 
 
 class HomeActivity : Activity() {
